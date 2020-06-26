@@ -23,9 +23,25 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.ael.mvc</groupId>
+            <artifactId>ael-mvc</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.20</version>
+        </dependency>
+        <!--<dependency>
             <groupId>com.github.aorxsr</groupId>
             <artifactId>ael-mvc</artifactId>
             <version>2.0.3</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf</artifactId>
+            <version>3.0.0.RELEASE</version>
         </dependency>
     </dependencies>
 
