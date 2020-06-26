@@ -11,9 +11,6 @@ import java.rmi.MarshalledObject;
 @Controller
 public class IndexController {
 
-    @Injection
-    private DBUtil dbUtil;
-
     @GetMapping(value = "/")
     public ModelAndView index() {
 
