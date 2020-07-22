@@ -15,6 +15,8 @@ public class App {
         Ael ael = new Ael();
         ael.addResourcesMapping("/statics", "/statics/");
         ael.addResourcesMapping("/public", "/public/");
+        ael.addResourcesMapping("/layuimini", "/layuimini/");
+        ael.addResourcesMapping("/page", "/template/layuimini/");
         // 异常配置
         ExecuteException executeException = ael.getExecuteException();
         executeException.addException(NoMappingException.class, new ExcInfo("org.ael.exception.Exceptions", "noMapping"));

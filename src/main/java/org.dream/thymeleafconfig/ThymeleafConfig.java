@@ -35,10 +35,11 @@ public class ThymeleafConfig implements AelTemplate {
 
     @Override
     public FullHttpResponse renderResponse(ModelAndView modelAndView, WebContent webContent) throws ViewNotFoundException {
+        // 这里 进行 模板，，，
+        webContent = render(modelAndView, webContent);
         ThymeleafWebContentImpl content = new ThymeleafWebContentImpl(webContent.getRequest(), webContent.getResponse(), webContent);
         String process = engine.process(modelAndView.getView(), content);
-        webContent.getResponse().write(ViewBody.of(process));
-        return new DefaultFullHttpResponse(HTTP_1_1, HttpResponseStatus.valueOf(webContent.getResponse().getStatus()), Unpooled.copiedBuffer(process.getBytes()));
+        return new DefaultFullHttpResponse(HTTP_1_1, HttpResponseStatus.OK, Unpooled.copiedBuffer(process.getBytes()));
     }
 
     @Override
